@@ -14,13 +14,15 @@
     <a-scene
       embedded
       arjs=" debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;sourceType: webcam;"
+      vr-mode-ui="enabled: false"
     >
       <a-marker type="barcode" value="7">
         <a-entity
-          rotation="0 270 0"
-          position="0 0 0"
+          rotation="90 270 0"
+          position="1.5 0 0"
           scale="20 20 20"
           gltf-model="./logo.glb"
+          animation="property: rotation; to: 90 270 360; loop: true; dur: 10000; easing:linear"
         ></a-entity>
       </a-marker>
     </a-scene>
