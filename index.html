@@ -16,6 +16,11 @@
       arjs=" debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;sourceType: webcam;"
       vr-mode-ui="enabled: false"
     >
+      <a-entity
+        light="type: directional; color: #EEE; intensity: 1.5"
+        position="-1 1 0"
+      ></a-entity>
+      <a-entity light="type: ambient; color: #CCC"></a-entity>
       <a-marker type="barcode" value="7">
         <a-entity
           rotation="0 270 0"
