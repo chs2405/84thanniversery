@@ -16,20 +16,17 @@
       arjs=" debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;sourceType: webcam;"
       vr-mode-ui="enabled: false"
     >
-      <a-entity
-        light="type: directional; color: #EEE; intensity: 1.5"
-        position="-1 1 0"
-      ></a-entity>
-      <a-entity light="type: ambient; color: #CCC"></a-entity>
       <a-marker type="barcode" value="7">
         <a-entity
-          rotation="0 270 0"
+          rotation="70 270 0"
+          position="0 0 0"
           scale="20 20 20"
-          position="0 0 1"
           gltf-model="./logo.glb"
-          animation="property: rotation; to: 0 270 360; loop: true; dur: 10000; easing:linear"
+          animation="property: rotation; to: 70 270 360; loop: true; dur: 10000; easing:linear"
         ></a-entity>
+        <!-- <a-box position="0 0 0" color="#4CC3D9"></a-box> -->
       </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
