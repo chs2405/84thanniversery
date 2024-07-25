@@ -72,10 +72,19 @@
       let resizedCanvas = document.createElement("canvas");
       let resizedContext = resizedCanvas.getContext("2d");
 
+      if (screen.width < screen.height) {
+        var w = height * (height / width);
+        var h = width * (height / width);
+        var offsetX = -(height - width);
+      } else {
+        var w = width;
+        var h = height;
+        var offsetX = 0;
+      }
       resizedCanvas.height = height;
       resizedCanvas.width = width;
 
-      resizedContext.drawImage(origCanvas, 0, 0, width, height);
+      resizedContext.drawImage(origCanvas, offsetX, 0, w, h);
       return resizedCanvas.toDataURL();
     }
     function captureVideoFrame(video, format, width, height) {
